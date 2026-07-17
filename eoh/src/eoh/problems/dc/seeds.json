@@ -1,0 +1,9 @@
+[
+    {
+      "code": "def get_features(i, j, t, ca, T, D_s):\n    if t == 0:\n        return []\n    else:\n        return D_s[:, t - 1]"
+    },
+
+    {
+      "code": "def get_features(i, j, t, ca, T, D_s):\n    if t == 0:\n        return []\n    phi1 = np.sum(D_s[j, :t])\n    phi2 = np.sum(ca[i, :] * D_s[:, t - 1])\n    if t >= 2:\n        phi3 = D_s[j, t - 1] - D_s[j, t - 2]\n    else:\n        phi3 = 0.0\n    phi4 = (T - t + 1) / T\n    return [phi1, phi2, phi3, phi4]"
+    }
+]

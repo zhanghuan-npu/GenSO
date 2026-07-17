@@ -1,0 +1,5 @@
+[
+    {
+      "code": "def get_features(t, d):\n    features = []\n    if t > 0:\n        features.append(d[t-1])\n    return features"
+    }
+]
