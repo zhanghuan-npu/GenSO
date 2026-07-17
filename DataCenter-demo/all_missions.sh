@@ -1,0 +1,1 @@
+jsub -m cu09 -n 16 -e error/%J.error -o out/%J.output -J test ./experiment.py

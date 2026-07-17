@@ -20,6 +20,14 @@ The key component of GenSO is the *Generative Linear Decision Rule* (GenLDR), in
 
 We establish finite-sample guarantees for fixed generated representations and further derive a performance bound under an assumption motivated by empirical scaling laws of LLMs. We evaluate GenSO on a multi-period newsvendor problem and a data center location problem with multi-period job scheduling calibrated using real-world datasets. Across both settings, GenSO consistently outperforms existing benchmarks in out-of-sample evaluations while uncovering interpretable nonlinear decision structures that are difficult to identify through conventional manual design.
 
+## Projects in This Repository
+
+This repository contains three independent projects:
+
+- [`GenSO/`](GenSO/): the GenSO implementation and LLM-guided representation-discovery experiments.
+- [`DataCenter-demo/`](DataCenter-demo/): standalone data center location and multi-period job-scheduling experiments.
+- [`MNV-demo/`](MNV-demo/): standalone multi-period newsvendor experiments.
+
 ## Highlights
 
 - **LLM-guided representation discovery:** GenSO uses problem structure and domain knowledge to generate nonlinear basis functions for adaptive recourse.
@@ -30,16 +38,19 @@ We establish finite-sample guarantees for fixed generated representations and fu
 ## Repository Structure
 
 ```text
-GenSO/
-└── eoh/
-    ├── setup.py
-    └── src/eoh/
-        ├── methods/       # LLM-guided evolutionary search
-        ├── problems/
-        │   ├── mnv/      # Multi-period newsvendor
-        │   └── dc/       # Data center location and job scheduling
-        ├── test/run.py   # Main experiment script
-        └── utils/
+.
+├── GenSO/
+│   └── eoh/
+│       ├── setup.py
+│       └── src/eoh/
+│           ├── methods/       # LLM-guided evolutionary search
+│           ├── problems/
+│           │   ├── mnv/      # Multi-period newsvendor
+│           │   └── dc/       # Data center location and job scheduling
+│           ├── test/run.py   # Main GenSO experiment script
+│           └── utils/
+├── DataCenter-demo/           # Independent data center experiments
+└── MNV-demo/                  # Independent newsvendor experiments
 ```
 
 ## Getting Started

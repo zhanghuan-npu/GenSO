@@ -20,6 +20,14 @@ GenSO 的核心组件是**生成式线性决策规则**（Generative Linear Deci
 
 我们针对固定的生成表示建立了有限样本保证，并进一步在一个由 LLM 经验缩放定律启发的假设下推导了性能界。我们在多周期报童问题，以及基于真实数据校准、包含多周期作业调度的数据中心选址问题上评估 GenSO。在两个实验场景中，GenSO 均在样本外评估中稳定优于现有基准，并发现了传统人工设计方法难以识别、但具有可解释性的非线性决策结构。
 
+## 仓库中的项目
+
+本仓库包含三个相互独立的项目：
+
+- [`GenSO/`](GenSO/)：GenSO 实现及 LLM 引导的表示发现实验。
+- [`DataCenter-demo/`](DataCenter-demo/)：独立的数据中心选址与多周期作业调度实验。
+- [`MNV-demo/`](MNV-demo/)：独立的多周期报童问题实验。
+
 ## 主要特点
 
 - **LLM 引导的表示发现：** 利用问题结构和领域知识，为自适应补救决策生成非线性基函数。
@@ -30,16 +38,19 @@ GenSO 的核心组件是**生成式线性决策规则**（Generative Linear Deci
 ## 仓库结构
 
 ```text
-GenSO/
-└── eoh/
-    ├── setup.py
-    └── src/eoh/
-        ├── methods/       # LLM 引导的演化搜索
-        ├── problems/
-        │   ├── mnv/      # 多周期报童问题
-        │   └── dc/       # 数据中心选址与作业调度
-        ├── test/run.py   # 主实验脚本
-        └── utils/
+.
+├── GenSO/
+│   └── eoh/
+│       ├── setup.py
+│       └── src/eoh/
+│           ├── methods/       # LLM 引导的演化搜索
+│           ├── problems/
+│           │   ├── mnv/      # 多周期报童问题
+│           │   └── dc/       # 数据中心选址与作业调度
+│           ├── test/run.py   # GenSO 主实验脚本
+│           └── utils/
+├── DataCenter-demo/           # 独立的数据中心实验
+└── MNV-demo/                  # 独立的报童问题实验
 ```
 
 ## 快速开始

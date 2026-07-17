@@ -1,0 +1,13 @@
+
+===== T=2, S=2 =====
+
+===== T=2, S=20 =====
+theta=1000, mean_cost=2739.720716, std_cost=572.155605
+theta=100, mean_cost=2739.720716, std_cost=572.155605
+theta=10, mean_cost=2779.405314, std_cost=600.190946
+theta=1, mean_cost=2903.055801, std_cost=611.082924
+theta=0.1, mean_cost=2690.645710, std_cost=654.806360
+theta=0.01, mean_cost=2690.235594, std_cost=655.406105
+theta=0.001, mean_cost=2754.436353, std_cost=639.203121
+theta=0.0001, mean_cost=2690.015813, std_cost=655.506119
+Best theta=0.0001, best_mean_cost=2690.015813
