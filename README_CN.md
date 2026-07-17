@@ -22,11 +22,12 @@ GenSO 的核心组件是**生成式线性决策规则**（Generative Linear Deci
 
 ## 仓库中的项目
 
-本仓库包含三个相互独立的项目：
+本仓库包含三个相互独立的项目，以及一个单独的实验结果归档：
 
 - [`GenSO/`](GenSO/)：GenSO 实现及 LLM 引导的表示发现实验。
 - [`DataCenter-demo/`](DataCenter-demo/)：独立的数据中心选址与多周期作业调度实验。
 - [`MNV-demo/`](MNV-demo/)：独立的多周期报童问题实验。
+- [`GenSO实验结果整理/`](GenSO实验结果整理/)：整理后的 GenSO 实验输出与分析文件。
 
 ## 主要特点
 
@@ -50,7 +51,17 @@ GenSO 的核心组件是**生成式线性决策规则**（Generative Linear Deci
 │           ├── test/run.py   # GenSO 主实验脚本
 │           └── utils/
 ├── DataCenter-demo/           # 独立的数据中心实验
-└── MNV-demo/                  # 独立的报童问题实验
+├── MNV-demo/                  # 独立的报童问题实验
+└── GenSO实验结果整理/          # 整理后的实验结果（Git LFS）
+```
+
+## 实验结果
+
+`GenSO实验结果整理/` 目录包含约 3.47 GiB 的生成式实验文件，因此使用 [Git Large File Storage](https://git-lfs.com/) 存储。克隆仓库或拉取完整实验结果前，请先安装 Git LFS：
+
+```bash
+git lfs install
+git lfs pull
 ```
 
 ## 快速开始

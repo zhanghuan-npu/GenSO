@@ -22,11 +22,12 @@ We establish finite-sample guarantees for fixed generated representations and fu
 
 ## Projects in This Repository
 
-This repository contains three independent projects:
+This repository contains three independent projects and a separate experiment-results archive:
 
 - [`GenSO/`](GenSO/): the GenSO implementation and LLM-guided representation-discovery experiments.
 - [`DataCenter-demo/`](DataCenter-demo/): standalone data center location and multi-period job-scheduling experiments.
 - [`MNV-demo/`](MNV-demo/): standalone multi-period newsvendor experiments.
+- [`GenSO实验结果整理/`](GenSO实验结果整理/): organized GenSO experimental outputs and analysis artifacts.
 
 ## Highlights
 
@@ -50,7 +51,17 @@ This repository contains three independent projects:
 │           ├── test/run.py   # Main GenSO experiment script
 │           └── utils/
 ├── DataCenter-demo/           # Independent data center experiments
-└── MNV-demo/                  # Independent newsvendor experiments
+├── MNV-demo/                  # Independent newsvendor experiments
+└── GenSO实验结果整理/          # Organized experiment results (Git LFS)
+```
+
+## Experiment Results
+
+The `GenSO实验结果整理/` directory is stored with [Git Large File Storage](https://git-lfs.com/) because it contains approximately 3.47 GiB of generated experimental artifacts. Install Git LFS before cloning or pulling the full results:
+
+```bash
+git lfs install
+git lfs pull
 ```
 
 ## Getting Started
